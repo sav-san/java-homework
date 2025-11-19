@@ -1,6 +1,6 @@
 package Homework11;
 
-import Homework9_10.Student;
+import Homework09_10.Student;
 
 public class Task3 {
     public static void main(String[]args){
