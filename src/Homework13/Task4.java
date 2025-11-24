@@ -9,7 +9,7 @@ public class Task4 {
         shirts[3] = "S004,Blue Polo Shirt,Blue,M";
         shirts[4] = "S005,Tan Polo Shirt,Tan,XL";
         shirts[5] = "S006,Black T-Shirt,Black,XL";
-        shirts[6] = "S007,White TShirt,White,XL";
+        shirts[6] = "S007,White T-Shirt,White,XL";
         shirts[7] = "S008,White T-Shirt,White,L";
         shirts[8] = "S009,Green T-Shirt,Green,S";
         shirts[9] = "S010,Orange T-Shirt,Orange,S";
