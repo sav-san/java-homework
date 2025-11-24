@@ -10,9 +10,6 @@ class Task1 extends JFrame {
     private Shape[] shapes;
     private Random random;
 
-
-
-
     public Task1() {
         setSize(800, 600);
 
