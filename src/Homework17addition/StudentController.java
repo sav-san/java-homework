@@ -1,4 +1,4 @@
-package Homework17;
+package Homework17addition;
 
 public class StudentController {
     private Student model;

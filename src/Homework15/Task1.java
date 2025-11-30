@@ -1,0 +1,78 @@
+package Homework15;
+
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.*;
+class LabExample extends JFrame{
+    JTextField jta1 = new JTextField(10);
+    JTextField jta2 = new JTextField(10);
+
+    JButton addButton = new JButton("Сложить");
+    JButton subButton = new JButton("Вычесть");
+    JButton multButton = new JButton("Перменожить");
+    JButton devButton = new JButton("Поделить");
+    LabExample(){
+        super("Example");
+        setLocationRelativeTo(null);
+        setLayout(new FlowLayout());
+        setSize(200,300);
+        add(new JLabel("1st Number"));
+        add(jta1);
+        add(new JLabel("2nd Number"));
+        add(jta2);
+        add(addButton);
+        addButton.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                try{
+                    double x1 = Double.parseDouble(jta1.getText().trim());
+                    double x2 = Double.parseDouble(jta2.getText().trim());
+                    JOptionPane.showMessageDialog(null, "Result = "+(x1+x2),"Answer",JOptionPane.INFORMATION_MESSAGE);
+                }catch(Exception e){
+                    JOptionPane.showMessageDialog( null, "Error in Numbers!","ALERT!" , JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+        add(subButton);
+        subButton.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                try{
+                    double x1 = Double.parseDouble(jta1.getText().trim());
+                    double x2 = Double.parseDouble(jta2.getText().trim());
+                    JOptionPane.showMessageDialog(null, "Result = "+(x1-x2),"Answer",JOptionPane.INFORMATION_MESSAGE);
+                }catch(Exception e){
+                    JOptionPane.showMessageDialog( null, "Error in Numbers!","ALERT!" , JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+        add(multButton);
+        multButton.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                try{
+                    double x1 = Double.parseDouble(jta1.getText().trim());
+                    double x2 = Double.parseDouble(jta2.getText().trim());
+                    JOptionPane.showMessageDialog(null, "Result = "+(x1*x2),"Answer",JOptionPane.INFORMATION_MESSAGE);
+                }catch(Exception e){
+                    JOptionPane.showMessageDialog( null, "Error in Numbers!","ALERT!" , JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+        add(devButton);
+        devButton.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                try{
+                    double x1 = Double.parseDouble(jta1.getText().trim());
+                    double x2 = Double.parseDouble(jta2.getText().trim());
+                    JOptionPane.showMessageDialog(null, "Result = "+(x1/x2),"Answer",JOptionPane.INFORMATION_MESSAGE);
+                }catch(Exception e){
+                    JOptionPane.showMessageDialog( null, "Error in Numbers!","ALERT!" , JOptionPane.ERROR_MESSAGE);
+                }
+            }
+        });
+        setVisible(true);
+
+    }
+    public static void main(String[]args){
+        new LabExample();
+    }
+}
+
