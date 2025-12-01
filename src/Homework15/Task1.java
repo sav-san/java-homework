@@ -9,13 +9,13 @@ class LabExample extends JFrame{
 
     JButton addButton = new JButton("Сложить");
     JButton subButton = new JButton("Вычесть");
-    JButton multButton = new JButton("Перменожить");
+    JButton multButton = new JButton("Перемножить");
     JButton devButton = new JButton("Поделить");
     LabExample(){
-        super("Example");
+        super("Calculator");
         setLocationRelativeTo(null);
         setLayout(new FlowLayout());
-        setSize(200,300);
+        setSize(200,200);
         add(new JLabel("1st Number"));
         add(jta1);
         add(new JLabel("2nd Number"));
