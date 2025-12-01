@@ -1,4 +1,4 @@
-package Homework17;
+package Homework17.Task1;
 
 public class MVCPatternDemo {
     public static void main(String[]args){

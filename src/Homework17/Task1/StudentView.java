@@ -1,4 +1,4 @@
-package Homework17;
+package Homework17.Task1;
 
 public class StudentView {
     public void printStudentDetails(String name, String rollNo){
