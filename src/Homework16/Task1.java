@@ -11,7 +11,7 @@ public class Task1 extends JFrame {
     int tries = 3;
     public Task1(){
 
-        int answer = (int)(Math.random()*11+1);
+        int answer = (int)(Math.random()*21+1);
         System.out.println(answer);
         super("Угадайка");
         setSize(300,150);

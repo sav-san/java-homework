@@ -8,13 +8,16 @@ import java.util.Random;
 
 class Task1 extends JFrame {
     private Shape[] shapes;
+    private Shape[] reserveShapes;
     private Random random;
-
+    private boolean circbool = true;
+    private boolean rectbool = true;
     public Task1() {
         setSize(800, 600);
 
         random = new Random();
         shapes = new Shape[20];
+        reserveShapes = new Shape[20];
         for (int i = 0; i < shapes.length; i++) {
             Color color = new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256));
             int x = random.nextInt(800);
@@ -23,10 +26,12 @@ class Task1 extends JFrame {
             if (random.nextBoolean()) {
                 int radius = 10 + random.nextInt(100);
                 shapes[i] = new Circle(color, x, y, radius);
+                reserveShapes[i] = new Circle(color, x, y, radius);
             } else {
                 int width = 20 + random.nextInt(150);
                 int height = 20 + random.nextInt(150);
                 shapes[i] = new Rectangle(color, x, y, width, height);
+                reserveShapes[i] = new Rectangle(color, x, y, width, height);
             }
         }
         JButton rect = new JButton("Прямоугольники");
@@ -34,11 +39,20 @@ class Task1 extends JFrame {
         rect.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                for (int i = 0; i < shapes.length; i++){
-                    if (shapes[i] instanceof Rectangle){
-                        shapes[i]=null;
+                if (rectbool) {
+                    for (int i = 0; i < shapes.length; i++) {
+                        if (shapes[i] instanceof Rectangle) {
+                            shapes[i] = new Rectangle(new Color(0,0,0),1,1,1,1);
+                        }
+                    }
+                } else {
+                    for (int i = 0; i < shapes.length; i++) {
+                        if (shapes[i] instanceof Rectangle) {
+                            shapes[i] = reserveShapes[i];
+                        }
                     }
                 }
+                rectbool = !rectbool;
                 repaint();
             }
         });
@@ -48,11 +62,20 @@ class Task1 extends JFrame {
         circ.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                for (int i = 0; i < shapes.length; i++){
-                    if (shapes[i] instanceof Circle){
-                        shapes[i]=null;
+                if (circbool) {
+                    for (int i = 0; i < shapes.length; i++) {
+                        if (shapes[i] instanceof Circle) {
+                            shapes[i] = new Circle(new Color(0,0,0),1,1,1);
+                        }
+                    }
+                } else {
+                    for (int i = 0; i < shapes.length; i++) {
+                        if (shapes[i] instanceof Circle) {
+                            shapes[i] = reserveShapes[i];
+                        }
                     }
                 }
+                circbool = !circbool;
                 repaint();
             }
         });
