@@ -10,7 +10,7 @@ class MovingCircle extends JFrame {
     private int pace = 50;
     private boolean horizontal = true;
     public MovingCircle() {
-        super("Розовая фигня летит по экрану (круто)");
+        super("Красная фигня летит по экрану (круто)");
         setSize(1920, 1080);
         setLocationRelativeTo(null);
 
@@ -95,7 +95,7 @@ class MovingCircle extends JFrame {
             g.setColor(Color.WHITE);
             g.fillRect(0, 100, getWidth(), getHeight() - 100);
 
-            g.setColor(Color.PINK);
+            g.setColor(Color.RED);
             g.fillOval(300, x, 300, 300);
         }
     }

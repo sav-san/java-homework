@@ -9,6 +9,13 @@ public class Student implements Comparable<Student> {
     private String group;
     private double gpa;
     private Calendar dateOfBirth;
+    public static Student[] students = {
+            new Student("Александр Иванов", 103, "КВБО-12-24", 4.5),
+            new Student("Алексей Кузнецов", 101, "КВБО-11-24", 4.8),
+            new Student("Иван Давыдов", 105, "КРБО-12-24", 4.2),
+            new Student("Дмитрий Кузнецов", 102, "ИКБО-30-24", 4.4),
+            new Student("Даниил Алексеев", 104, "ККСО-11-23", 4.9)
+    };
 
     public Student(String name, int id, String group, double gpa) {
         this.name = name;

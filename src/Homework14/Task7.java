@@ -6,6 +6,7 @@ public class Task7 {
     public static void main (String[]args){
         Scanner scan = new Scanner(System.in);
         String possibilities = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_";
+        System.out.println("Введите желаемый пароль:\n");
         String password = scan.next();
         boolean hasUpper = false;
         boolean hasLower = false;

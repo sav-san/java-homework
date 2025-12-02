@@ -79,8 +79,8 @@ public class Task {
 
     public static void main(String[]args){
 //        Exception1.exceptionDemo3();
-//        Exception2.exceptionDemo();
+        Exception2.exceptionDemo();
 //        try { ThrowsDemo1.getDetails(null);} catch (NullPointerException e) { System.out.println("Ну делаааа");}
-        ThrowsDemo2.getKey();
+//        ThrowsDemo2.getKey();
     }
 }

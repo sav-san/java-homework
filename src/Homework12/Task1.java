@@ -9,6 +9,7 @@ import java.util.Random;
 class Task1 extends JFrame {
     private Shape[] shapes;
     private Shape[] reserveShapes;
+    private Color[] colors = {new Color (255,0,0),new Color(0,255,0),new Color(0,0,255)};
     private Random random;
     private boolean circbool = true;
     private boolean rectbool = true;
@@ -19,7 +20,7 @@ class Task1 extends JFrame {
         shapes = new Shape[20];
         reserveShapes = new Shape[20];
         for (int i = 0; i < shapes.length; i++) {
-            Color color = new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256));
+            Color color = colors[random.nextInt(3)];
             int x = random.nextInt(800);
             int y = random.nextInt(100,600);
 

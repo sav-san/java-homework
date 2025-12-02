@@ -13,7 +13,7 @@ public class Person{
     public Person(String surname, String name){
         this.surname=surname;
         this.name = name;
-        this.fathername=null;
+        this.fathername= null;
     }
     public Person(String surname, String name, String fathername){
         this.surname=surname;

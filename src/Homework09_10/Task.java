@@ -18,24 +18,17 @@ public class Task {
 //    }
 
     public static void main(String[] args) {
-        Student[] students = {
-                new Student("Сава", 103, "КВБО-12-24", 4.5),
-                new Student("Кира", 101, "КВБО-11-24", 4.8),
-                new Student("Саня", 105, "КРБО-12-24", 4.2),
-                new Student("Глеб", 102, "ИКБО-30-24", 4.4),
-                new Student("Даня", 104, "ККСО-11-23", 4.9)
-        };
 
         System.out.println("Исходный массив:");
-        Student.outArray(students);
+        Student.outArray(Student.students);
 
-        MergeSortStudents.sortStudents(students);
+        MergeSortStudents.sortStudents(Student.students);
         System.out.println("\nОтсортированный массив (по ID):");
-        Student.outArray(students);
-        SortingStudentsByGPA.qSort(students);
+        Student.outArray(Student.students);
+        SortingStudentsByGPA.qSort(Student.students);
 
         System.out.println("\nОтсортированный массив (по GPA):");
-        Student.outArray(students);
+        Student.outArray(Student.students);
 
     }
 }

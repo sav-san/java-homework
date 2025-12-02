@@ -30,7 +30,7 @@ public class Task2 extends JFrame {
                     label.setIcon(null);
                     ImageIcon image = new ImageIcon(imageurl);
                     Image im = image.getImage();
-                    Image scaledImage = im.getScaledInstance(1920, 800, Image.SCALE_SMOOTH);
+                    Image scaledImage = im.getScaledInstance(1920,1080 , Image.SCALE_SMOOTH);
                     ImageIcon scaledIcon = new ImageIcon(scaledImage);
                     label.setIcon(scaledIcon);
                     setVisible(true);
