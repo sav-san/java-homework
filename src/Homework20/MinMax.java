@@ -1,16 +1,18 @@
 package Homework20;
 
-public class MinMax {
-    double[] arr;
+import java.util.Collection;
 
-    public MinMax(double[] arr) {
+public class MinMax <A extends Collection<Number>> {
+    private A arr;
+    public MinMax(A arr) {
         this.arr = arr;
     }
+
     public double min(){
         double min = 10^100;
-        for (double d : arr){
-            if (d < min){
-                min = d;
+        for (Number d : arr){
+            if (d.doubleValue() < min){
+                min = d.doubleValue();
             }
         }
         return min;
@@ -18,9 +20,9 @@ public class MinMax {
 
     public double max(){
         double max = -10^100;
-        for (double d : arr) {
-            if (d>max){
-                max = d;
+        for (Number d : arr) {
+            if (d.doubleValue()>max){
+                max = d.doubleValue();
             }
         }
         return max;

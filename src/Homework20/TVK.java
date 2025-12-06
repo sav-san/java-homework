@@ -3,7 +3,7 @@ package Homework20;
 import javax.sql.rowset.serial.SerialArray;
 import java.io.Serializable;
 
-public class TVK<T extends Comparable<T>,V extends Serializable,K> {
+public class TVK<T extends Comparable,V extends Serializable,K> {
     private T token;
     private V value;
     private K key;
